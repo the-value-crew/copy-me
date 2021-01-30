@@ -5,43 +5,137 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>copy-me</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://unpkg.com/@bibhuticoder/copy-me"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@10.5.0/styles/dracula.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@10.5.0/highlight.min.js"></script>
 </head>
-
-<script src="https://unpkg.com/@bibhuticoder/copy-me"></script>
-<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
-
 
 <body>
 
     <div id="app">
-        <h1>copy-me</h1>
-        <p>
-            Dead simple copy component for vue.js
-        </p>
-        <copy-me text="asdasdas" @fail="handleFail">
-            <button slot="handler">copy</button>
-        </copy-me>
-        {{ message }}
+        <h1 class="heading">copy-me</h1>
+        <h2>
+            Dead simple vue.js component for copying text
+        </h2>
+
+        <div class="card-container">
+            <div class="card">
+                <h2 class="text-center">Usage</h2>
+
+                <div class="code">
+                    <pre><code class="bash">npm i @bibhuticoder/copy-me</code></pre>
+
+                    <pre><code class="language-xml"> 
+&lt;template&gt;
+    &lt;copy-me :text="I'm copied"ß&gt;
+        &lt;button slot="handler"&gt; Click Me &lt;/button&gt;
+    &lt;/copy-me&gt;
+&lt;/template&gt;
+</code></pre>
+
+
+
+                    <pre><code class="vue">import CopyMe from "@bibhuticoder/copy-me";
+    
+    export default {
+        name: "Your-Component",
+        components: {
+            CopyMe: 'copy-me'
+        }
+    }</code></pre>
+
+                </div>
+
+            </div>
+
+            <div class="card" id="vue-app">
+                <h2 class="text-center">Examples</h2>
+                <copy-me text="asdasdas" @fail="handleFail">
+                    <button slot="handler">copy</button>
+                </copy-me>
+            </div>
+        </div>
+
+        <div class="card-container">
+            <div class="card">
+                <h2 class="text-center">Props</h2>
+                <table class="table">
+                    <thead>
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th>Description</th>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>text*</td>
+                            <td>String</td>
+                            <td>Text to be copied</td>
+                        </tr>
+                        <tr>
+                            <td>notify</td>
+                            <td>Boolean</td>
+                            <td>Default: true</td>
+                        </tr>
+                        <tr>
+                            <td>successMessage</td>
+                            <td>String</td>
+                            <td>Default: "Copied"</td>
+                        </tr>
+                        <tr>
+                            <td>failMessage</td>
+                            <td>String</td>
+                            <td>Default: "Fail"</td>
+                        </tr>
+                        <tr>
+                            <td>toastCss</td>
+                            <td>String</td>
+                            <td>Default: ""</td>
+                        </tr>
+                    </tbody>
+
+                </table>
+            </div>
+            <div class="card">
+                <h2 class="text-center">Events</h2>
+            </div>
+        </div>
+
+
     </div>
 
 
 
     <script>
         var app = new Vue({
-            el: '#app',
+            el: '#vvue-aßpp',
             data: {
                 message: 'Hello Vue!'
             },
+            // mounted(){
+            //     console.log()
+            //     this.$refs.vueCode.innerHTML = `
+
+            //     `;
+            // },
             methods: {
                 handleFail() {
                     alert("fail");
                 }
             }
         })
-        console.log(CopyMe);
+
         Vue.component(CopyMe.name, CopyMe);
 
+
     </script>
+    <script>hljs.initHighlightingOnLoad();</script>
 
 </body>
 

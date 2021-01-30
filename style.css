@@ -1,0 +1,61 @@
+body{
+    font-family: 'Karla', sans-serif;
+}
+
+#app{
+    text-align: center;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.heading{
+    font-weight: bold;
+    color: #01d28e;
+}
+
+.card-container{
+    display: flex;
+}
+
+.card{
+    background-color: #f6f6f6;
+    padding: 0.25rem;
+    margin: 1rem;
+    width: 100%;
+    border-radius: 0.5rem;
+    text-align: left;
+    color: #373737;
+}
+
+.code{
+    max-width: 420px;
+    margin: 0 auto;
+}
+
+.hljs{
+    border-radius: 0.15rem;
+}
+
+.text-center{
+    text-align: center;
+}
+
+table, tr, td, th{
+    border: 1px solid #373737;
+}
+
+.table{
+    width: 90%;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+.table th{
+    padding: 0.25rem;
+    font-weight: bold;
+    color: black;
+}
+
+.table td{
+    padding: 0.5rem;
+}
