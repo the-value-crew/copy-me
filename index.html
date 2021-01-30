@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>copy-me</title>
+</head>
+
+<script src="https://unpkg.com/@bibhuticoder/copy-me"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+
+
+<body>
+
+    <div id="app">
+        <h1>copy-me</h1>
+        <p>
+            Dead simple copy component for vue.js
+        </p>
+        <copy-me text="asdasdas" @fail="handleFail">
+            <button slot="handler">copy</button>
+        </copy-me>
+        {{ message }}
+    </div>
+
+
+
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                message: 'Hello Vue!'
+            },
+            methods: {
+                handleFail() {
+                    alert("fail");
+                }
+            }
+        })
+        console.log(CopyMe);
+        Vue.component(CopyMe.name, CopyMe);
+
+    </script>
+
+</body>
+
+</html>
